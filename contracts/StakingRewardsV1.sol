@@ -8,7 +8,7 @@ import "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 
-contract StakingRewards is Initializable, ReentrancyGuardUpgradeable {
+contract StakingRewardsV1 is Initializable, ReentrancyGuardUpgradeable {
 
     using SafeMathUpgradeable for uint256;
     using SafeERC20Upgradeable for IERC20Upgradeable;
