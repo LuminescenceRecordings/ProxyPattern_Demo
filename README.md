@@ -6,5 +6,6 @@
 <br>
 <br>
 <br>
-在此感谢Zero2Hero训练营，感谢各位老师、同学的教导与帮助<br>
+在此感谢BNB Chain和Blockchain Academy合作的Zero2Hero训练营<br>
+感谢各位老师、同学的教导与帮助<br>
 2023.4.9
