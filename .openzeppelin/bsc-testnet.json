@@ -1,0 +1,424 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x33952682333eBCE851794C941637a1C9E61c7114",
+    "txHash": "0x18d9c55ebc549ed3764b47d96b0ab02e9ce62c9f4737cf7d1f32d4ffcd594a79"
+  },
+  "proxies": [
+    {
+      "address": "0x8C0FAeF1864923DAECa52103e9872130F6f23629",
+      "txHash": "0x63e2bf8e47dd9be7db82f2a0ff2e30f597aaaa2492c52dcdf6c9bcab18e10053",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "345e2d9218eaab85a1bac1de330648dc7db70c98dc8a6b9617f6f5e70e5e85c3": {
+      "address": "0xC8F868008072C501b48f922C8739E7D7191B0Ef4",
+      "txHash": "0x639571092b37ce62ec7abc055afba4e7093a0e3faa9ed0302e3148f27faed772",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "tokenStaked",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_contract(IERC20Upgradeable)319",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:16"
+          },
+          {
+            "label": "tokenRewarded",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_contract(IERC20Upgradeable)319",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:17"
+          },
+          {
+            "label": "RPT",
+            "offset": 0,
+            "slot": "53",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:20"
+          },
+          {
+            "label": "updateTime",
+            "offset": 0,
+            "slot": "54",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:21"
+          },
+          {
+            "label": "totalSupply",
+            "offset": 0,
+            "slot": "55",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:22"
+          },
+          {
+            "label": "userRPT",
+            "offset": 0,
+            "slot": "56",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:24"
+          },
+          {
+            "label": "userRewards",
+            "offset": 0,
+            "slot": "57",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:25"
+          },
+          {
+            "label": "balances",
+            "offset": 0,
+            "slot": "58",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV1",
+            "src": "contracts/StakingRewardsV1.sol:26"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC20Upgradeable)319": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "5d518a1e7af789ba3b81b91d73b8d3f75b55f6703675b4aa8240641df94f9ffa": {
+      "address": "0xD2866EDC818445BAa1543654f86c833c8A76a372",
+      "txHash": "0xd85562e1c404709573b56cfa1639a3890e18537b63eed95be02f29b7e5f45ff3",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "tokenStaked",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_contract(IERC20Upgradeable)319",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:16"
+          },
+          {
+            "label": "tokenRewarded",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_contract(IERC20Upgradeable)319",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:17"
+          },
+          {
+            "label": "RPT",
+            "offset": 0,
+            "slot": "53",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:22"
+          },
+          {
+            "label": "updateTime",
+            "offset": 0,
+            "slot": "54",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:23"
+          },
+          {
+            "label": "totalSupply",
+            "offset": 0,
+            "slot": "55",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:24"
+          },
+          {
+            "label": "userRPT",
+            "offset": 0,
+            "slot": "56",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:26"
+          },
+          {
+            "label": "userRewards",
+            "offset": 0,
+            "slot": "57",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:27"
+          },
+          {
+            "label": "balances",
+            "offset": 0,
+            "slot": "58",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:28"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC20Upgradeable)319": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "697c123445c212e6fe83e52c4fb1784afb90542060adeb068007b6e9735601db": {
+      "address": "0xEC9522679968A57Bc445BCc71A355c22A9cFEbd4",
+      "txHash": "0x9446992fa358c168923e08aae58240dc08dbae2ca1f3713bd29e1209661c6d6b",
+      "layout": {
+        "solcVersion": "0.8.18",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:67"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:80"
+          },
+          {
+            "label": "tokenStaked",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_contract(IERC20Upgradeable)319",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:16"
+          },
+          {
+            "label": "tokenRewarded",
+            "offset": 0,
+            "slot": "52",
+            "type": "t_contract(IERC20Upgradeable)319",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:17"
+          },
+          {
+            "label": "RPT",
+            "offset": 0,
+            "slot": "53",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:22"
+          },
+          {
+            "label": "updateTime",
+            "offset": 0,
+            "slot": "54",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:23"
+          },
+          {
+            "label": "totalSupply",
+            "offset": 0,
+            "slot": "55",
+            "type": "t_uint256",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:24"
+          },
+          {
+            "label": "userRPT",
+            "offset": 0,
+            "slot": "56",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:26"
+          },
+          {
+            "label": "userRewards",
+            "offset": 0,
+            "slot": "57",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:27"
+          },
+          {
+            "label": "balances",
+            "offset": 0,
+            "slot": "58",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakingRewardsV2",
+            "src": "contracts/StakingRewardsV2.sol:28"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_contract(IERC20Upgradeable)319": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}

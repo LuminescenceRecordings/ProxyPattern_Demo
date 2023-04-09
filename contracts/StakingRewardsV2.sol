@@ -16,7 +16,9 @@ contract StakingRewardsV2 is Initializable, ReentrancyGuardUpgradeable {
     IERC20Upgradeable private tokenStaked;
     IERC20Upgradeable private tokenRewarded;
 
-    uint256 constant rewardRate = 0.1 ether ;
+    //<----UPGRADE-----
+    uint256 constant rewardRate = 0.2 ether ;
+    //-----UPGRADE---->
     uint256 private RPT; //当前累加值, Reward Per Token
     uint256 private updateTime;  //当前时间戳
     uint256 private totalSupply; //当前区间质押总量
@@ -77,11 +79,10 @@ contract StakingRewardsV2 is Initializable, ReentrancyGuardUpgradeable {
 
     //质押tokenStaked
     function Stake(uint256 amount) public nonReentrant Update (msg.sender) {
-        amount = amount.mul(1e18);
-
         require(amount > 0, "Cannot stake 0");
+        amount = amount.mul(1 ether);
+      
         tokenStaked.safeTransferFrom(msg.sender, address(this), amount);
-
 
         totalSupply = totalSupply.add(amount);
         balances[msg.sender] = balances[msg.sender].add(amount);
@@ -89,12 +90,11 @@ contract StakingRewardsV2 is Initializable, ReentrancyGuardUpgradeable {
 
     //取出tokenStaked
     function Withdraw(uint256 amount) public nonReentrant Update (msg.sender) {
-        amount = amount.mul(1e18);
-        
         require(amount > 0, "Cannot withdraw 0");
         require(balances[msg.sender] >= amount, "Insufficent balance");
+        amount = amount.mul(1 ether);
+        
         tokenStaked.safeTransfer(msg.sender, amount);
-
 
         totalSupply = totalSupply.sub(amount);
         balances[msg.sender] = balances[msg.sender].sub(amount);
@@ -113,21 +113,21 @@ contract StakingRewardsV2 is Initializable, ReentrancyGuardUpgradeable {
     //此合约tokenRewarded余额
     function ContractBalance() public view returns (uint256) {
         uint256 amount = tokenRewarded.balanceOf(address(this));
-        amount = amount / 1e18;
+        amount = amount / 1 ether;
 
         return amount;
     }
 
     function TotalSupply() public view returns (uint256) {
         uint256 amount = totalSupply;
-        amount = amount / 1e18;
+        amount = amount / 1 ether;
 
         return amount;
     }
 
     function UserBalance(address user) public view returns (uint256) {
         uint256 amount = balances[user];
-        amount = amount / 1e18;
+        amount = amount / 1 ether;
 
         return amount;
     }
@@ -135,10 +135,31 @@ contract StakingRewardsV2 is Initializable, ReentrancyGuardUpgradeable {
 
     function UserRewards(address user) public view returns (uint256) {
         uint256 amount = userRewards[user];
-        amount = amount / 1e18;
+        amount = amount / 1 ether;
 
         return amount;
     }
+
+
+//=================================================================
+
+//<----UPGRADE-----
+    function DiceGame(uint256 guess, uint256 bet) public returns (uint256) {
+        require(guess >= 1 && guess <= 6, "Guess must be between 1 and 6.");
+        require(bet >= 100, "The bet must be greater than 100.");
+        bet = bet.mul(1 ether);
+
+        tokenRewarded.safeTransferFrom(msg.sender, address(this), bet);
+
+        uint256 roll = uint256(keccak256(abi.encodePacked(block.timestamp))) % 6 + 1;
+
+        if(guess == roll) {
+            tokenRewarded.safeTransfer(msg.sender, bet.mul(6).sub(10 ether));
+        } 
+
+        return roll;
+    }
+//-----UPGRADE---->
 
 
 }

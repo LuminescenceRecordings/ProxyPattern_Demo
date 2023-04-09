@@ -6,7 +6,6 @@ typechain
 typechain-types
 .DS_Store
 
-.openzeppelin/
 
 # Hardhat files
 cache
