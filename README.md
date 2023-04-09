@@ -1,13 +1,8 @@
-# Sample Hardhat Project
+# 使用指南
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+请先到https://testnet.bnbchain.org/faucet-smart领取BUSD
+前往逻辑合约:0x8C0FAeF1864923DAECa52103e9872130F6f23629，质押BUSD获得奖励代币Z2H
+获得的Z2H代币可以去押注猜骰子，猜中高达6倍利润！
 
-Try running some of the following tasks:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+在此感谢Zero2Hero训练营，感谢各位老师、同学的教导与帮助
