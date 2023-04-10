@@ -6,6 +6,8 @@ typechain
 typechain-types
 .DS_Store
 
+flattened_contracts/
+
 
 # Hardhat files
 cache
